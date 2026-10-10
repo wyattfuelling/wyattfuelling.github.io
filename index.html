@@ -268,6 +268,51 @@
     .footer-inner { display: flex; justify-content: space-between; gap: 15px; flex-wrap: wrap; }
     :focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 
+
+    .support-cta {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 26px;
+      margin-top: 28px;
+      padding: clamp(25px, 4vw, 38px);
+      border: 1px solid rgba(109, 247, 178, .48);
+      border-radius: 24px;
+      background:
+        radial-gradient(ellipse at 95% 0%, rgba(109, 247, 178, .17), transparent 20rem),
+        linear-gradient(115deg, rgba(109, 247, 178, .10), rgba(16, 24, 32, .96) 72%);
+      box-shadow: 0 18px 60px rgba(0, 0, 0, .18), inset 0 0 0 1px rgba(109, 247, 178, .035);
+    }
+    .support-copy { position: relative; z-index: 1; max-width: 650px; }
+    .support-cta h2 { margin: 10px 0 10px; }
+    .support-cta p { margin: 0; color: var(--muted); }
+    .support-button {
+      position: relative;
+      z-index: 1;
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 0 22px;
+      border-radius: 13px;
+      background: var(--accent);
+      color: #07130d;
+      text-decoration: none;
+      font-weight: 850;
+      box-shadow: 0 8px 25px rgba(109, 247, 178, .16);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .support-button:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(109, 247, 178, .24); }
+    .support-note { display: block; margin-top: 12px; color: #81939d; font-size: .8rem; }
+    @media (max-width: 760px) {
+      .support-cta { align-items: flex-start; flex-direction: column; gap: 22px; }
+      .support-button { width: 100%; }
+    }
+
     @media (max-width: 760px) {
       main { padding-top: 42px; }
       .hero { grid-template-columns: 1fr; gap: 30px; padding-bottom: 48px; }
@@ -384,6 +429,24 @@
           <div><strong>Java</strong><small>Object-oriented programming</small></div>
         </div>
       </div>
+    </section>
+
+
+    <section class="support-cta" aria-labelledby="support-heading">
+      <div class="support-copy">
+        <div class="eyebrow">Support the mission</div>
+        <h2 id="support-heading">Help build a safer digital world.</h2>
+        <p>
+          Your support helps make room for security learning, responsible
+          research, and projects focused on protecting people online.
+          Choose from Buy Me a Coffee, PayPal, Venmo, Cash App, or Bitcoin
+          on the donation page.
+        </p>
+        <span class="support-note">Secure external payment options · One-time and recurring support where available</span>
+      </div>
+      <a class="support-button" href="donate.html">
+        Support my work <span aria-hidden="true">↗</span>
+      </a>
     </section>
 
     <section class="mission" id="mission" aria-labelledby="mission-heading">
